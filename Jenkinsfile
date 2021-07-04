@@ -1,9 +1,9 @@
 pipeline {
 	agent any
     stages {
-        stage("Build Master"){}
+        stage("Build Master"){
             when{
-                branch 'main'
+                branch 'master'
             }
             steps{
                 echo "Deploying master branch"
@@ -18,3 +18,5 @@ pipeline {
             }
         }
     }
+
+}
