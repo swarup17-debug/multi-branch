@@ -3,20 +3,12 @@ pipeline {
     stages {
         stage("Build Master"){
             when{
-                branch 'main'
+                buildingTag()
             }
             steps{
-                echo "Deploying master branch"
+                echo "buiding from tag"
             }
         }
-        stage("Build Dev"){
-            when{   
-                branch 'dev'
-            }
-            steps{
-                echo "Deploying Dev branch"
-            }
-        }
-    }
-
+	}
 }
+
