@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage("Build Master"){
             when{
-                branch 'master'
+                branch 'main'
             }
             steps{
                 echo "Deploying master branch"
